@@ -17,7 +17,7 @@
   "require": {
     "php": "^8.1",
     "benjaminhirsch/nova-slug-field": "^1.2",
-    "cviebrock/eloquent-sluggable": "^7.0|^8.0",
+    "cviebrock/eloquent-sluggable": "^9.0",
     "epartment/nova-dependency-container": "^1.2",
     "illuminate/support": "^9.8.1",
     "koss-shtukert/laravel-nova-select2-auto-complete": "^1.20",
