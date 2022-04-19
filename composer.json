@@ -19,13 +19,13 @@
     "benjaminhirsch/nova-slug-field": "^1.2",
     "cviebrock/eloquent-sluggable": "^7.0|^8.0",
     "epartment/nova-dependency-container": "^1.2",
-    "illuminate/support": "^8.43",
+    "illuminate/support": "^9.8.1",
     "koss-shtukert/laravel-nova-select2-auto-complete": "^1.20",
-    "novius/laravel-nova-order-nestedset-field": "^2.0.1",
+    "novius/laravel-nova-order-nestedset-field": "dev-upgrade_nova_4",
     "optimistdigital/nova-locale-field": "^2.0"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.0",
+    "friendsofphp/php-cs-fixer": "^3.8",
     "orchestra/testbench": "^6.20.1",
     "phpunit/phpunit": "^9.3.3"
   },
@@ -39,6 +39,12 @@
       "Novius\\LaravelNovaMenu\\Tests\\": "tests/"
     }
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:Ange7/laravel-nova-order-nestedset-field.git"
+    }
+  ],
   "extra": {
     "laravel": {
       "providers": [
