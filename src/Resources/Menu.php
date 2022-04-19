@@ -3,12 +3,11 @@
 namespace Novius\LaravelNovaMenu\Resources;
 
 use App\Nova\Resource;
-use Benjaminhirsch\NovaSlugField\Slug;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Slug;
 use OptimistDigital\NovaLocaleField\LocaleField;
 use Novius\LaravelNovaMenu\Filters\Locale;
 
@@ -71,12 +70,13 @@ class Menu extends Resource
         return [
             ID::make()->sortable(),
 
-            TextWithSlug::make(trans('laravel-nova-menu::menu.menu_name'), 'name')
+            Text::make(trans('laravel-nova-menu::menu.menu_name'), 'name')
                 ->slug('slug')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
             Slug::make(trans('laravel-nova-menu::menu.slug'), 'slug')
+                ->from('name')
                 ->rules('required', 'regex:/^[0-9a-z\-_]+$/i'),
 
             LocaleField::make('Locale', 'locale', 'locale_parent_id')
